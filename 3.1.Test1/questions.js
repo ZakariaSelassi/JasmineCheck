@@ -67,5 +67,5 @@ let hypothenuse = (ab, ac) => {
     return Math.hypot(ab, ac);
 }
 let calculIMC = (poids, taille) => {
-    return console.log((poids / (taille * taille)).toFixed(2));
+    return parseFloat((poids / (taille * taille)).toFixed(2));
 }
