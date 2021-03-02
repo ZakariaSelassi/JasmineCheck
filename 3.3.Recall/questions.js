@@ -52,19 +52,32 @@ let addElementToBeginning = (array, element) => {
 }
 
 let sortByLastLetter = (array) => {
-    return 'Write your method here';
+    let select = array.sort((a, b) => a.charCodeAt(a.length - 1) - b.charCodeAt(b.length - 1));
+
+    return select;
 }
 
 let getFirstHalf = (string) => {
-    return 'Write your method here';
+    let c = Math.round(string.length / 2);
+    let res = string.substr(0, c);
+    return res;
 }
 
 let makeNegative = (number) => {
-    return 'Write your method here';
+    return -Math.abs(number);
 }
 
 let numberOfPalindromes = (array) => {
-    return 'Write your method here';
+    let arr = [...array];
+
+    let cpt = 0;
+    array.forEach(e => {
+        if ((e.split('').reverse().join('') == e)) {
+            cpt++;
+        }
+
+    })
+    return cpt;
 }
 
 let shortestWord = (array) => {
