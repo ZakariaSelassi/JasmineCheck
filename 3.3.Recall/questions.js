@@ -1,33 +1,54 @@
 let selectElementsStartingWithA = (array) => {
-    return 'Write your method here';
+
+    let select = array.filter(array => array.startsWith("a"));
+
+    return select;
 }
 
 let selectElementsStartingWithVowel = (array) => {
-    return 'Write your method here';
+    let vowel = /^[aeiou]/i;
+    let select = array.filter(arr => vowel.test(arr));
+
+    return select;
 }
 
 let removeNullElements = (array) => {
-    return 'Write your method here';
+
+    let select = array.filter(arr => arr != null);
+
+    return select;
+
 }
 
 let removeNullAndFalseElements = (array) => {
-    return 'Write your method here';
+
+    return array.filter((a) => {
+        return a === 0 || a;
+    });
+
 }
 
 let reverseWordsInArray = (array) => {
-    return 'Write your method here';
+    let arr = [];
+    array.forEach(e => {
+        arr.push(e.split("").reverse().join(""))
+    });
+    return arr;
 }
 
 let everyPossiblePair = (array) => {
-    return 'Write your method here';
+    let pairs = (array) => array.map((v, i) => array.slice(i + 1).map(w => [v, w])).flat();
+    return pairs;
 }
 
 let allElementsExceptFirstThree = (array) => {
-    return 'Write your method here';
+
+    return array.splice(3, array.length - 1);
 }
 
 let addElementToBeginning = (array, element) => {
-    return 'Write your method here';
+    array.unshift(element);
+    return array;
 }
 
 let sortByLastLetter = (array) => {
