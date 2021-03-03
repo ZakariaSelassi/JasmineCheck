@@ -186,15 +186,18 @@ let removeCapitals = (string) => {
 }
 
 let roundUp = (number) => {
-    return 'Write your method here';
+    return Math.ceil(number);
 }
 
 let formatDateNicely = (date) => {
-    return 'Write your method here';
+    let format = date.toLocaleDateString("fr-fr");
+    return format;
 }
 
 let getDomainName = (string) => {
-    return 'Write your method here';
+    let domain = string.replace(/.*@/, "");
+    let a = domain.replace('.com', '');
+    return a;
 }
 
 let titleize = (string) => {
@@ -202,7 +205,8 @@ let titleize = (string) => {
 }
 
 let checkForSpecialCharacters = (string) => {
-    return 'Write your method here';
+    let regex = /[ `!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?~]/;
+    return regex.test(string);
 }
 
 let squareRoot = (number) => {
