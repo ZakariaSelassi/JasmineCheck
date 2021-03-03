@@ -81,27 +81,64 @@ let numberOfPalindromes = (array) => {
 }
 
 let shortestWord = (array) => {
-    return 'Write your method here';
+    /*let arr = "";
+    for (let i = 0; i < array.length; i++) {
+        if (arr.length < array.length) {
+            return console.log(array);
+        }
+    }*/
+    let short = array.reduce((a, b) => {
+        return a.length <= b.length ? a : b;
+    })
+    return short;
 }
 
 let longestWord = (array) => {
-    return 'Write your method here';
+    let long = array.reduce((a, b) => {
+        return a.length >= b.length ? a : b;
+    })
+    return long;
 }
 
 let sumNumbers = (array) => {
-    return 'Write your method here';
+    /*
+    let sum = 0;
+     for (let i = 0; i < array.length; i++) {
+         sum += array[i];
+     }
+
+     return console.log(sum);*/
+    let sum = array.reduce((a, b) => {
+        return a + b;
+    })
+    return sum;
+
 }
 
 let repeatElements = (array) => {
-    return 'Write your method here';
+    let arr = [...array];
+    let repeat = arr.concat(array);
+    return repeat;
 }
 
 let stringToNumber = (string) => {
-    return 'Write your method here';
+    let test = 2;
+    console.log(test.toString());
+
+    return parseInt(string);
 }
 
 let calculateAverage = (array) => {
-    return 'Write your method here';
+    let avg = 0;
+    let sum = 0;
+    for (let i = 0; i < array.length; i++) {
+        sum += array[i];
+        avg = sum / array.length;
+    }
+    return avg;
+    /*let avg = array.reduce((a, b) => {
+        return console.log(a + b) / array.length;
+    })*/
 }
 
 let getElementsUntilGreaterThanFive = (array) => {
