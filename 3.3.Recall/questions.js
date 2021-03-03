@@ -122,23 +122,20 @@ let repeatElements = (array) => {
 }
 
 let stringToNumber = (string) => {
-    let test = 2;
-    console.log(test.toString());
 
     return parseInt(string);
 }
 
 let calculateAverage = (array) => {
-    let avg = 0;
+    /*let avg = 0;
     let sum = 0;
     for (let i = 0; i < array.length; i++) {
         sum += array[i];
         avg = sum / array.length;
     }
-    return avg;
-    /*let avg = array.reduce((a, b) => {
-        return console.log(a + b) / array.length;
-    })*/
+    return avg;*/
+    let avg = array.reduce((a, b) => a + b);
+    return avg / array.length;
 }
 
 let getElementsUntilGreaterThanFive = (array) => {
@@ -146,23 +143,46 @@ let getElementsUntilGreaterThanFive = (array) => {
 }
 
 let convertArrayToObject = (array) => {
-    return 'Write your method here';
+    let conv = Object.assign(array);
+    return conv;
 }
 
 let getAllLetters = (array) => {
-    return 'Write your method here';
+
+    let a = array.map(e => e.split(''));
+    for (let i = 0; i < array.length; i++) {
+        a = a.concat(array);
+    }
+    return;
+
 }
 
 let swapKeysAndValues = (object) => {
-    return 'Write your method here';
+    // crée un objet vide
+    let newObject = {};
+    Object.entries(object).forEach(entry => {
+        // permutation
+        let key = entry[0];
+
+        let value = entry[1];
+
+        newObject[value] = key;
+    });
+    return newObject;
+
 }
 
 let sumKeysAndValues = (object) => {
-    return 'Write your method here';
+    let sum = 0;
+    let t = Object.values(object).reduce((a, b) => a + b);
+    let b = Object.entries(object).reduce((a, b) => a + b);
+
+
 }
 
 let removeCapitals = (string) => {
-    return 'Write your method here';
+    let a = string.replace(/[A-Z]/g, '');
+    return a;
 }
 
 let roundUp = (number) => {
