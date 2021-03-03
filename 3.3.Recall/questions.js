@@ -210,11 +210,16 @@ let checkForSpecialCharacters = (string) => {
 }
 
 let squareRoot = (number) => {
-    return 'Write your method here';
+    return Math.sqrt(number);
 }
 
 let factorial = (number) => {
-    return 'Write your method here';
+    let f = 1;
+    for (let i = 1; i <= number; i++) {
+        number = f * i;
+    }
+    console.log(number);
+
 }
 
 let findAnagrams = (string) => {
