@@ -146,17 +146,15 @@ let getElementsUntilGreaterThanFive = (array) => {
 
 let convertArrayToObject = (array) => {
     let conv = Object.assign(array);
-    return console.log(conv);
+    return conv;
 }
 
 let getAllLetters = (array) => {
-
-    let a = array.map(e => e.split(''));
-    for (let i = 0; i < array.length; i++) {
-        a = a.concat(array);
-    }
-    return;
-
+    // convert to string
+    let converToString = array.join("");
+    let transformArray = converToString.split("").map(x => x).sort();
+    let deletDubplication = [...new Set(transformArray)];
+    return deletDubplication;
 }
 
 let swapKeysAndValues = (object) => {
@@ -182,7 +180,7 @@ let sumKeysAndValues = (object) => {
     });
 
     total = t + b;
-    console.log(total);
+    return total;
 
 }
 
