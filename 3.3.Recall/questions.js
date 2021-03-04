@@ -139,12 +139,14 @@ let calculateAverage = (array) => {
 }
 
 let getElementsUntilGreaterThanFive = (array) => {
-    return 'Write your method here';
+
+    let s = array.slice(0, 6);
+    return s;
 }
 
 let convertArrayToObject = (array) => {
     let conv = Object.assign(array);
-    return conv;
+    return console.log(conv);
 }
 
 let getAllLetters = (array) => {
@@ -173,10 +175,14 @@ let swapKeysAndValues = (object) => {
 }
 
 let sumKeysAndValues = (object) => {
-    let sum = 0;
+    let total = 0;
     let t = Object.values(object).reduce((a, b) => a + b);
-    let b = Object.entries(object).reduce((a, b) => a + b);
+    let b = Object.keys(object).map(x => parseInt(x)).reduce((a, b) => {
+        return a + b;
+    });
 
+    total = t + b;
+    console.log(total);
 
 }
 
