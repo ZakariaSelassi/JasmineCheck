@@ -215,21 +215,26 @@ let squareRoot = (number) => {
 
 let factorial = (number) => {
     let f = 1;
-    for (let i = 1; i <= number; i++) {
-        number = f * i;
+
+    for (let i = number; i >= 1; i--) {
+        f = f * i;
     }
-    console.log(number);
+    return f;
 
 }
 
 let findAnagrams = (string) => {
-    return 'Write your method here';
+    return;
 }
 
 let convertToCelsius = (number) => {
-    return 'Write your method here';
+    let convertToCelsius = Math.round((number - 32) * 5 / 9);
+    return convertToCelsius;
 }
 
 let letterPosition = (array) => {
-    return 'Write your method here';
+
+
+    let s = array.map(x => (parseInt(x, 36) - 9));
+    return s;
 }
